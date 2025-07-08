@@ -46,7 +46,6 @@ export default function ResultDisplay({ result, error }) {
       <div className="result-row"><span className="result-label">Year:</span><span className="result-value">{res.pass_year}</span></div>
       <div className="result-row"><span className="result-label">Result:</span><span className="result-value">{res.result === 'P' ? 'Passed' : 'Failed'}</span></div>
       <div className="result-row"><span className="result-label">Group:</span><span className="result-value">{res.stud_group}</span></div>
-      <div className="result-row"><span className="result-label">Details:</span><span className="result-value">{res.display_details}</span></div>
       {/* Subject-wise results */}
       <div style={{ width: '100%', marginTop: 24 }}>
         <div style={{ fontWeight: 700, color: '#0097a7', marginBottom: 8, fontSize: '1.1rem' }}>Subject-wise Grades</div>
