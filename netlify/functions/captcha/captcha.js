@@ -10,6 +10,9 @@ exports.handler = async function(event, context) {
         'Content-Type': 'image/png',
         'Set-Cookie': cookie,
         'Cache-Control': 'no-store',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Expose-Headers': 'Set-Cookie'
       },
       body: Buffer.from(arrayBuffer).toString('base64'),
       isBase64Encoded: true,
