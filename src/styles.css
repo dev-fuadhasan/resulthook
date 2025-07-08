@@ -1,0 +1,108 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.result-form, .result-display {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+  margin-bottom: 24px;
+}
+
+.result-form label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #00796b;
+}
+
+.result-form input, .result-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #b2ebf2;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  background: #f7fafd;
+  transition: border 0.2s;
+}
+
+.result-form input:focus, .result-form select:focus {
+  border: 1.5px solid #00bcd4;
+  outline: none;
+}
+
+.result-form button[type="submit"] {
+  background: linear-gradient(90deg, #00bcd4 0%, #0097a7 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,188,212,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.result-form button[type="submit"]:hover {
+  background: linear-gradient(90deg, #0097a7 0%, #00bcd4 100%);
+  box-shadow: 0 4px 16px rgba(0,188,212,0.16);
+}
+
+.result-form button[type="button"] {
+  background: #e0f7fa;
+  color: #00796b;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 4px;
+  transition: background 0.2s;
+}
+
+.result-form button[type="button"]:hover {
+  background: #b2ebf2;
+}
+
+.result-form img[alt="captcha"] {
+  border-radius: 6px;
+  border: 1px solid #b2ebf2;
+  background: #f7fafd;
+  margin-right: 8px;
+}
+
+.result-display {
+  background: #f7fafd;
+  border: 1.5px solid #b2ebf2;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,188,212,0.06);
+  padding: 28px 20px;
+  color: #004d40;
+}
+
+.result-display h2 {
+  color: #00796b;
+  margin-top: 0;
+}
+
+.result-display div {
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 600px) {
+  .result-form, .result-display {
+    padding: 16px 6px;
+  }
+} 
