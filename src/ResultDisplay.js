@@ -36,19 +36,20 @@ export default function ResultDisplay({ result, error }) {
   // Optional subject: 126 (Higher Mathematics)
   const optionalCode = '126';
   return (
-    <div className="result-display">
-      <h2>Result</h2>
-      <div className="result-name">{res.name} ({res.roll_no})</div>
-      <div className={`result-gpa${res.result !== 'P' ? ' result-fail' : ''}`}>GPA: {res.gpa} {res.result !== 'P' && '(Failed)'}</div>
-      <div className="result-row"><span className="result-label">Institute:</span><span className="result-value">{res.inst_name}</span></div>
-      <div className="result-row"><span className="result-label">Board:</span><span className="result-value">{res.board_name}</span></div>
-      <div className="result-row"><span className="result-label">Exam:</span><span className="result-value">{res.exam_name}</span></div>
-      <div className="result-row"><span className="result-label">Year:</span><span className="result-value">{res.pass_year}</span></div>
-      <div className="result-row"><span className="result-label">Result:</span><span className="result-value">{res.result === 'P' ? 'Passed' : 'Failed'}</span></div>
-      <div className="result-row"><span className="result-label">Group:</span><span className="result-value">{res.stud_group}</span></div>
-      {/* Subject-wise results */}
-      <div style={{ width: '100%', marginTop: 24 }}>
-        <div style={{ fontWeight: 700, color: '#0097a7', marginBottom: 8, fontSize: '1.1rem' }}>Subject-wise Grades</div>
+    <div className="result-display result-flex">
+      <div className="result-details-col">
+        <h2>Result</h2>
+        <div className="result-name">{res.name} ({res.roll_no})</div>
+        <div className={`result-gpa${res.result !== 'P' ? ' result-fail' : ''}`}>GPA: {res.gpa} {res.result !== 'P' && '(Failed)'}</div>
+        <div className="result-row"><span className="result-label">Institute</span><span className="result-value">{res.inst_name}</span></div>
+        <div className="result-row"><span className="result-label">Board</span><span className="result-value">{res.board_name}</span></div>
+        <div className="result-row"><span className="result-label">Exam</span><span className="result-value">{res.exam_name}</span></div>
+        <div className="result-row"><span className="result-label">Year</span><span className="result-value">{res.pass_year}</span></div>
+        <div className="result-row"><span className="result-label">Result</span><span className="result-value">{res.result === 'P' ? 'Passed' : 'Failed'}</span></div>
+        <div className="result-row"><span className="result-label">Group</span><span className="result-value">{res.stud_group}</span></div>
+      </div>
+      <div className="result-subjects-col">
+        <div style={{ fontWeight: 700, color: '#0097a7', marginBottom: 8, fontSize: '1.1rem', textAlign: 'center' }}>Subject-wise Grades</div>
         <table className="subject-table">
           <thead>
             <tr>
