@@ -41,6 +41,27 @@ body {
   box-sizing: border-box;
 }
 
+.result-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 16px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+  margin-bottom: 24px;
+}
+
+.result-form > div {
+  grid-column: span 2;
+}
+
+@media (min-width: 500px) {
+  .result-form > div:not(:nth-child(6)) {
+    grid-column: span 1;
+  }
+}
+
 .result-form label {
   display: block;
   font-weight: 700;
@@ -53,10 +74,11 @@ body {
   padding: 10px 12px;
   border: 1px solid #b2ebf2;
   border-radius: 8px;
-  margin-bottom: 18px;
+  margin-bottom: 0;
   font-size: 1rem;
   background: #f7fafd;
   transition: border 0.2s;
+  margin-top: 2px;
 }
 
 .result-form input:focus, .result-form select:focus {
@@ -75,6 +97,8 @@ body {
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,188,212,0.08);
   transition: background 0.2s, box-shadow 0.2s;
+  grid-column: span 2;
+  margin-top: 10px;
 }
 
 .result-form button[type="submit"]:hover {
@@ -180,6 +204,47 @@ body {
   text-align: right;
 }
 
+/* Subject Table Styles */
+.subject-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,188,212,0.06);
+}
+.subject-table th, .subject-table td {
+  padding: 8px 10px;
+  text-align: left;
+  font-size: 1rem;
+}
+.subject-table th {
+  background: #e0f7fa;
+  color: #00796b;
+  font-weight: 700;
+  border-bottom: 2px solid #b2ebf2;
+}
+.subject-table tr {
+  border-bottom: 1px solid #e0f2f1;
+}
+.subject-table tr:last-child {
+  border-bottom: none;
+}
+.subject-table td {
+  color: #004d40;
+}
+.subject-table .optional-row td {
+  background: #f3e5f5;
+  color: #6a1b9a;
+  font-weight: 600;
+}
+.subject-table .ca-row td {
+  background: #e8f5e9;
+  color: #388e3c;
+  font-weight: 600;
+}
+
 @media (max-width: 600px) {
   .main-container {
     padding: 16px 2px 12px 2px;
@@ -189,5 +254,9 @@ body {
   }
   .result-display {
     padding: 20px 6px 16px 6px;
+  }
+  .subject-table th, .subject-table td {
+    font-size: 0.95rem;
+    padding: 6px 4px;
   }
 } 
