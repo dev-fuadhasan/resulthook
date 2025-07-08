@@ -23,10 +23,8 @@ export default function App() {
   };
 
   return (
-    <div style={{ maxWidth: 500, margin: '40px auto' }}>
-      <h1 style={{ color: '#00796b', textAlign: 'center', fontWeight: 700, marginBottom: 32 }}>
-        Bangladesh Board Results <span style={{ fontWeight: 400, fontSize: '1.1rem' }}>(Unofficial Proxy)</span>
-      </h1>
+    <div className="main-container">
+      <h1 className="main-title">Bangladesh Board Results</h1>
       <ResultForm onSubmit={handleSubmit} loading={loading} />
       <ResultDisplay result={result} error={error} />
     </div>
