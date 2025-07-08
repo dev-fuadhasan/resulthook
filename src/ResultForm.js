@@ -68,7 +68,7 @@ function ResultForm() {
     setResult(null);
 
     try {
-      const res = await fetch("https://eboardresults.com/v2/getres", {
+      const res = await fetch("/api/getres", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
