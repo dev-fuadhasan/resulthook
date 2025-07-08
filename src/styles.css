@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 48px 12px 32px 12px;
+  padding: 48px 12px 48px 12px;
   animation: fadeIn 0.8s ease;
 }
 
@@ -80,16 +80,24 @@ body {
   color: #00796b;
 }
 
-.result-form input, .result-form select {
+.form-group {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #b2ebf2;
-  border-radius: 8px;
-  margin-bottom: 0;
-  font-size: 1rem;
-  background: #f7fafd;
-  transition: border 0.2s;
-  margin-top: 2px;
+  margin-bottom: 18px;
+}
+
+.result-form input,
+.result-form select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .form-group {
+    margin-bottom: 14px;
+  }
 }
 
 .result-form input:focus, .result-form select:focus {

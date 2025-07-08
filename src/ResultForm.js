@@ -62,32 +62,32 @@ export default function ResultForm({ onSubmit, loading }) {
 
   return (
     <form onSubmit={handleSubmit} className="result-form">
-      <div>
-        <label>Exam:</label>
+      <div className="form-group">
+        <label>Exam</label>
         <select name="exam" value={form.exam} onChange={handleChange} required>
           {EXAMS.map(e => <option key={e.value} value={e.value}>{e.label}</option>)}
         </select>
       </div>
-      <div>
-        <label>Year:</label>
+      <div className="form-group">
+        <label>Year</label>
         <input name="year" type="number" value={form.year} onChange={handleChange} required min="2000" max={new Date().getFullYear()} />
       </div>
-      <div>
-        <label>Board:</label>
+      <div className="form-group">
+        <label>Board</label>
         <select name="board" value={form.board} onChange={handleChange} required>
           {BOARDS.map(b => <option key={b.value} value={b.value}>{b.label}</option>)}
         </select>
       </div>
-      <div>
-        <label>Roll:</label>
+      <div className="form-group">
+        <label>Roll</label>
         <input name="roll" type="text" value={form.roll} onChange={handleChange} required />
       </div>
-      <div>
-        <label>Registration:</label>
+      <div className="form-group">
+        <label>Registration</label>
         <input name="reg" type="text" value={form.reg} onChange={handleChange} required />
       </div>
-      <div>
-        <label>Captcha:</label>
+      <div className="form-group">
+        <label>Captcha</label>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           {captchaImg && <img src={captchaImg} alt="captcha" style={{ height: 40, marginRight: 8 }} />}
           <button type="button" onClick={loadCaptcha} disabled={captchaLoading} style={{ marginRight: 8 }}>
