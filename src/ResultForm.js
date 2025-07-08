@@ -4,6 +4,7 @@ import { fetchCaptcha } from './api';
 const EXAMS = [
   { value: 'ssc', label: 'SSC' },
   { value: 'hsc', label: 'HSC' },
+  { value: 'jsc', label: 'JSC' },
 ];
 const BOARDS = [
   { value: 'dhaka', label: 'Dhaka' },
