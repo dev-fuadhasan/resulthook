@@ -93,7 +93,7 @@ export default function ResultForm({ onSubmit, loading }) {
           <button type="button" onClick={loadCaptcha} disabled={captchaLoading} style={{ marginRight: 8 }}>
             {captchaLoading ? 'Loading...' : 'Reload'}
           </button>
-          <input name="captcha" type="text" value={form.captcha} onChange={handleChange} required maxLength={4} style={{ width: 60 }} />
+          <input name="captcha" type="text" value={form.captcha} onChange={handleChange} required maxLength={4} style={{ width: 120 }} />
         </div>
       </div>
       {error && <div style={{ color: 'red' }}>{error}</div>}
